@@ -1,6 +1,6 @@
 #Qual melhor cotação
 # Real para peso argentino 
-class Melhercambio:
+class Melhorcambio:
     def __init__(self,peso_cotacao,taxa,real =0):
         self.real = real
         self.taxa = taxa
