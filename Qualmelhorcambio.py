@@ -1,3 +1,5 @@
+#Qual melhor cotação
+# Real para peso argentino 
 class Melhercambio:
     def __init__(self,peso_cotacao,taxa,real =0):
         self.real = real
@@ -19,21 +21,17 @@ class Melhercambio:
         total = self.taxa_apaga + self.valor_apaga
         self.operacao.append(["Total a paga",total])
 
-
+    #taxa_dois falta melhor na Exceções e  lógica
     def taxa_dois(self,taxa_soma):
-        while True:
-            try:
-                perguta = input("Soma Taxa do primeiro valor como segundo para saber total [s] uo [n]:")
-                if perguta.upper() == "S":
-                    s = self.valor_apaga + (taxa_soma * self.peso_cotacao) 
-                    return self.operacao.append(["Total + Taxa",s])
-                elif perguta.upper() == "N":
-                    print('pense bem')
-                    break
-            except Exception:
-                print("Algo de errado aconteceu")
+        perguta = input("Soma Taxa do primeiro valor como segundo para saber total [s] uo [n]:")
+        if perguta.upper() == "S":
+            s = self.valor_apaga + (taxa_soma * self.peso_cotacao) 
+            return self.operacao.append(["Total + Taxa",s])
+        elif perguta.upper() == "N":
+            print('pense bem')
 
-                  
+
+           
     def resumo(self):
         print(f"Teste programa de cotação ")
         print(f'Valor para enviar:R${self.real:6.2f}')
